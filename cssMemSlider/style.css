@@ -14,13 +14,15 @@ body {
   display: flex;
   flex-direction: column;
   width: 95%;
-  height: 90%;
+  height: 100%;
   margin: 0 auto;
   background-color: aqua;
   border-radius: 0.5em;
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
   max-width: 100%;
   height: 100%;
   margin: 1em;
@@ -28,46 +30,52 @@ body {
   border-radius: 0.5em;
 }
 
+input {
+  display: none;
+}
+
 .img-container {
   width: 100%;
-  height: 50%;
+  height: 90%;
   background-color: blueviolet;
   border-radius: 0.5em;
 }
 
 .img {
   width: 100%;
-  height: 100%;
+  height: 0;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  transform: translate(100%);
+  transition: transform ease 0.5s;
 }
 
 .img-1 {
   background-image: url('./assets/41fc595e-e08f-4e5c-b01e-ecca93859376.jpg');
 }
 
-.img- {
+.img-2 {
   background-image: url('./assets/8e8970e1-8eb0-49b7-b8f6-171540868f44.jpg');
 }
 
-.img- {
+.img-3 {
   background-image: url('./assets/a27fb386-b08c-41bd-bd4f-ca242adc6c57.jpg');
 }
 
-.img- {
+.img-4 {
   background-image: url('./assets/ad1423fb-e17c-4cc3-850f-266de23ab62a.jpg');
 }
 
-.img- {
+.img-5 {
   background-image: url('./assets/b07929a3-d4aa-43b4-b387-bf421771793f.jpg');
 }
 
-.img- {
+.img-6 {
   background-image: url('./assets/d2cb96e7-2978-46ce-bc8b-a52f3a5807d9.jpg');
 }
 
-.img- {
+.img-7 {
   background-image: url('./assets/photo1652344664.jpeg');
 }
 
@@ -75,14 +83,26 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 1em;
+  align-items: center;
+  margin-top: 1.5em;
 }
 
 label {
-  padding: 0.4em;
+  display: inline-block;
+  padding: 0.8rem;
+  border-radius: 50%;
   cursor: pointer;
+  background: radial-gradient(circle at 50%, #3007e7 50%, transparent 55%);
+  /* background: radial-gradient(circle at 50%, rgb(165, 39, 39) 15%, rgb(15, 216, 8) 30%, rgb(48, 7, 231) 53%, transparent 55%); */
 }
 
-input {
-  cursor: pointer;
+#img-1:checked ~ .img-container .img-1,
+#img-2:checked ~ .img-container .img-2,
+#img-3:checked ~ .img-container .img-3,
+#img-4:checked ~ .img-container .img-4,
+#img-5:checked ~ .img-container .img-5,
+#img-6:checked ~ .img-container .img-6,
+#img-7:checked ~ .img-container .img-7 {
+  height: 100%;
+  transform: none;
 }
