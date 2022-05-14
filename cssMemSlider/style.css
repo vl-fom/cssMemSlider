@@ -79,12 +79,55 @@ input {
   background-image: url('./assets/photo1652344664.jpeg');
 }
 
+#img-1:checked ~ .img-container .img-1,
+#img-2:checked ~ .img-container .img-2,
+#img-3:checked ~ .img-container .img-3,
+#img-4:checked ~ .img-container .img-4,
+#img-5:checked ~ .img-container .img-5,
+#img-6:checked ~ .img-container .img-6,
+#img-7:checked ~ .img-container .img-7 {
+  height: 100%;
+  transform: none;
+  transition: transform ease 0.5s;
+}
+
+.controls-wrapper {
+  display: flex;
+  gap: 0.01em;
+}
+
 .controls {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   margin-top: 1.5em;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 10em;
+  height: 1.2em;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 0;
+  transform: translate(100%);
+  transition: transform ease 0.5s;
+}
+
+#img-1:checked ~ .controls .title-wrapper .title-1,
+#img-2:checked ~ .controls .title-wrapper .title-2,
+#img-3:checked ~ .controls .title-wrapper .title-3,
+#img-4:checked ~ .controls .title-wrapper .title-4,
+#img-5:checked ~ .controls .title-wrapper .title-5,
+#img-6:checked ~ .controls .title-wrapper .title-6,
+#img-7:checked ~ .controls .title-wrapper .title-7 {
+  font-size: 1em;
+  transform: none;
+  transition: transform ease 0.5s;
 }
 
 label {
@@ -127,15 +170,4 @@ label:hover {
 #img-6 ~ .controls .controls-wrapper label[for="img-6"]:active,
 #img-7 ~ .controls .controls-wrapper label[for="img-7"]:active {
   background: radial-gradient(circle at 50%, #2617a7 15%, #d6d625 25%, #3007e7 40%, transparent 45%);
-}
-
-#img-1:checked ~ .img-container .img-1,
-#img-2:checked ~ .img-container .img-2,
-#img-3:checked ~ .img-container .img-3,
-#img-4:checked ~ .img-container .img-4,
-#img-5:checked ~ .img-container .img-5,
-#img-6:checked ~ .img-container .img-6,
-#img-7:checked ~ .img-container .img-7 {
-  height: 100%;
-  transform: none;
 }
