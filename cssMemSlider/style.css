@@ -103,7 +103,7 @@ input {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.5em;
+  margin: auto 0;
 }
 
 .title-wrapper {
@@ -186,17 +186,16 @@ label:hover {
   .controls {
     flex-direction: column-reverse;
     gap: 1.5em;
-    margin-bottom: 1.5em;
+    margin: 1.5em 0;
   }
 
   .title-wrapper {
     width: 100%;
-    height: 2.3em;
+    height: 2.5em;
   }
 
   .title {
     width: 100%;
-    text-align: left;
   }
 
 }
