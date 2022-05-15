@@ -181,8 +181,13 @@ label:hover {
     margin-bottom: 1.5em;
   }
 
+  .title-wrapper {
+    width: 100%;
+  }
+
   .title {
-    text-align: center;
+    width: 100%;
+    text-align: left;
   }
 
 }
