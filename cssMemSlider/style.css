@@ -13,6 +13,7 @@ body {
 .slider {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 95%;
   height: 100%;
   margin: 0 auto;
@@ -23,7 +24,7 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 100%;
+  width: 85vh;
   height: 100%;
   margin: 1em;
   background-color: antiquewhite;
@@ -36,7 +37,7 @@ input {
 
 .img-container {
   width: 100%;
-  height: 90%;
+  height: 85vh;
   background-color: blueviolet;
   border-radius: 0.5em;
   overflow: hidden;
@@ -46,7 +47,7 @@ input {
   width: 100%;
   height: 0;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   transform: translate(100%);
   transition: transform ease 0.5s;
@@ -109,7 +110,7 @@ input {
   display: flex;
   flex-direction: column;
   width: 22em;
-  height: 2.3em;
+  height: 1.2em;
   overflow-x: hidden;
 }
 
